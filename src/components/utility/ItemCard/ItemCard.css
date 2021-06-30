@@ -1,0 +1,161 @@
+/* Optic card */
+.ot-card{
+    position: relative;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+/* Optic card inside ( for special padding ) */
+.ot-card-in:hover{
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+
+/* Card image */
+.img-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+/* .img-section img{
+    position: absolute;
+} */
+
+/* .img-section .mockup{
+    opacity: 0;
+    width: 100%;
+
+}
+
+
+
+.img-section:hover .mockup{
+    -webkit-transition: opacity 0.1s ease-in;
+       -moz-transition: opacity 0.1s ease-in;
+         -o-transition: opacity 0.1s ease-in;
+                                  opacity: 1;
+} */
+/* .img-section:hover span{
+    border: 2px solid white;
+} */
+/* Optic color */
+.color-section{
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+}
+
+.color-section span{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: bisque;
+    margin: 0 3px;
+    padding: 2px;
+    border: 2px solid lightgray;
+}
+
+.ot-card-in{
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid #EAEAEA;
+    border-radius: 10px;
+}
+
+.ot-card-in h1{
+    font-size: 16px;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.ot-card-in h4{
+    font-size: 16px;
+    margin-top: 0.8rem;
+}
+
+/* Optic card image */
+.ot-card img{
+    width: 60%;
+}
+
+/* Optic card button */
+.ot-card-in button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    border: none;
+    color: white;
+    margin-top: 15px;
+    background-color: tomato;
+    margin-bottom: 14px;
+    margin-top: 20px;
+}
+
+.ot-card-in button:hover{
+    box-shadow: tomato 0px 2px 8px 0px;
+
+}
+
+/* Price section design */
+.price-section{
+    padding: 10px;
+    width: 100%;
+    background-color: bisque;
+}
+
+/* badge design */
+.badge{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-size: 1rem;
+    color: white;
+    padding: 20px 10px;
+    background-color: tomato;
+
+}
+
+/* .after-mockup{
+    display: none;
+}
+
+.befor-mockup:hover .after-mockup{
+    display: block;
+} */
+
+@media (max-width: 560px) {
+
+    .ot-card{
+        margin: 15px 0 !important;
+    }
+
+    .img-section{        
+        height: 200px;
+    }
+
+    .badge{
+   
+        padding: 10px 6px;
+    
+    }
+
+    .color-section span{
+        height: 15px;
+        width: 15px;
+    }
+
+    .price-section{
+        border-radius: 1px;
+    }
+
+    .ot-card-in{
+        border-radius: 1px;
+    }
+}

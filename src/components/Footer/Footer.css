@@ -1,0 +1,115 @@
+.footer-root{
+    position: relative;
+}
+
+/* Newsletter Form */
+.nl-form input{
+    width: 500px;
+    padding: 5px 15px;
+    border: 2px solid #E5E5E5;
+}
+
+.nl-form button{
+    padding: 5px 15px;
+    margin-left: 10px;
+    border: 2px solid #E5E5E5;
+}
+
+/* Footer address section */
+.fa-section{
+    text-align: left;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.fa-section i{
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/* Footer information section */
+.fi-section h5{
+    margin-bottom: 45px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+.fi-section ul{
+    margin: 0;
+    padding: 0;
+}
+
+.fi-section ul li{
+    margin-top: 20px;
+    text-align: left;
+    list-style: none;
+}
+
+.fi-section ul li:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.floating-cart{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    bottom: 20px;
+    background-color: tomato;
+}
+
+
+/* Mobile responsive */
+@media (max-width: 560px) {
+    .form-section{
+        flex-direction: column;
+        margin-top: 30px;
+        border-bottom: 2px solid #E5E5E5;
+        padding-bottom: 50px;
+    }
+
+    .form-section span{
+        margin-bottom: 20px;
+    }
+
+    .nl-form{
+        margin-top: 20px;
+    }
+
+    .nl-form input{
+        width: 60%;
+        padding: 5px 15px;
+        border: 2px solid #E5E5E5;
+    }
+
+    .nl-form button{
+        color: white;
+        background-color: tomato;
+    }
+
+    /* menu section */
+    .menu-section{
+        flex-direction: column;
+        margin: 0 30px;
+    }
+
+    .fi-section{
+        margin-top: 40px;
+    }
+
+    .fi-section h5{
+        padding-bottom: 15px;
+        border-bottom: 2px solid #E5E5E5;
+    }
+
+    .copyrigh-section{
+        flex-direction: column;
+    }
+}

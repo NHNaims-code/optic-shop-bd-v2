@@ -1,0 +1,24 @@
+/* topbar ul */
+
+
+/* Mobile responsive */
+@media (max-width: 560px) {
+
+    .topbar-root{
+        padding: 0 10px;
+    }
+
+    .topbar-root span{
+        font-size: 12px;
+    }
+
+    .topbar-root li{
+       
+    }
+
+    .topbar-root a{
+        font-size: 12px;
+        margin: 0;
+        padding: 5px;
+    }
+}
