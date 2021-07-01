@@ -4,9 +4,7 @@
 }
 
 @media (max-width: '600px') {
-    .card-padding{
-        padding: 5px;
-    }
+    
 }
 
 h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}

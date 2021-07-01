@@ -12,7 +12,7 @@ const BrandCarousel = () => {
 
 
     var settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 3,

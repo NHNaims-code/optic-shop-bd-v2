@@ -11,7 +11,7 @@
 /* Exclosive icon */
 .ex-icon{
     color: #C8C8C8;
-    color: bisque;
+    color: tomato;
     font-size: 46px;
 }
 
@@ -54,7 +54,8 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0, 0.3);
+    background-color: rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
     z-index: 0;
 }
 
@@ -100,7 +101,7 @@
 }
 
 .mi-card{
-    height: 300px;
+    height: 260px;
     width: 100% !important;
     margin: 0 !important;
 }

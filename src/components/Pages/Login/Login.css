@@ -1,0 +1,19 @@
+.login-root{
+    width: 400px;
+    height: 500px;
+    margin: 50px auto;
+}
+
+.login-root button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 60px;
+
+}
+
+.login-root button img{
+    margin-right: 15px;
+}

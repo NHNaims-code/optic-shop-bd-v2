@@ -2,20 +2,37 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './Home.css';
 import './NewCard.css';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Carousel from '../../Carousel/Carousel';
 import Optic from "../../../assets/glasses/glass.jpg"
 import Optic2 from "../../../assets/glasses/glass2.jpg" 
 import Optic3 from "../../../assets/glasses/41Kp7Xc7StL._AC_UL320_.jpg" 
-import Glass from '../../../assets/glass.webp';
-import ItemCard from '../../utility/ItemCard/ItemCard';
 import BrandCarousel from '../../Carousel/BrandCarousel';
 import Spin from './Spin/Spin';
 import Banner2 from '../../../assets/banner2.jpg';
 import Loading from '../../utility/Loading/Loading';
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 const Home = () => {
 
-   
+    useEffect(() => {
+        Aos.init({ duration: 1000 })
+    }, [])
+
+    const containerStyle = {
+    width: '100%',
+    height: '600px'
+    };
+
+    const position = {
+        lat:23.7709168, lng:90.422718
+    };
+    
+    const onLoad = marker => {
+        console.log('marker: ', marker)
+    }
+
     const arr = [0,0,0,0,0,0,0,0]
   
 
@@ -26,6 +43,7 @@ const Home = () => {
 
     
             {/* Exclosive section */}
+            <hr/>
             <div className="d-flex justify-content-between my-3 ex-section">
                 <div className="d-flex align-items-center ex-content py-2 my-2">
                     <i class="fa fa-rocket ex-icon mr-4" aria-hidden="true"></i>
@@ -49,6 +67,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <hr/>
 
             {/* Major Items */}
             <div className=" mi-section d-flex w-100 my-3">
@@ -65,23 +84,25 @@ const Home = () => {
             </div>
 
             <div className="spin">
-            <Spin/>
+            {/* <Spin/> */}
             </div>
 
             {/* Weekly Featured*/}
             <div class="">
+        <hr/>
         <h3 class="h3">Brand new</h3>
-        <div class="row">
+        <hr/>
+        <div class="row px-3">
 
             {
                 arr.map(p=>
                     
-                    <div class="col-md-3 col-6 card-padding">
+                    <div data-aos="zoom-in-left" class="col-md-3 col-6 card-padding">
                     <div class="product-grid3">
-                        <div class="product-image3">
+                        <div class="product-image3 d-flex p-3 align-items-center justify-content-center" style={{height: '150px'}}>
                             <Link to="/product">
-                                <img class="pic-1" src={Optic2}/>
-                                <img class="pic-2" src={Optic2}/>
+                                <img class="pic-1" src={Optic}/>
+                                <img class="pic-2" src={Optic}/>
                             </Link>
                             <ul class="social">
                                 <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
@@ -90,7 +111,7 @@ const Home = () => {
                             <span class="product-new-label">New</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                            <h3 class="title"><a href="#">Retro Sunglass</a></h3>
                             <div class="price">
                                 $63.50
                                 <span>$75.00</span>
@@ -106,26 +127,25 @@ const Home = () => {
                     </div>
                 </div>
                     
-                    )
+                )
             }
-           
-           
-            
         </div>
     </div>
 
-            {/* Advertisement */}
-                <hr/>
-                <img width="100%" src="https://do6sydhp1s299.cloudfront.net/assets/images/slider/EZ-banner-Spectacle-Lens-1440x525-111920%20(1).webp" alt="ads"/>
-                <hr/>
+    {/* Advertisement */}
+        <hr/>
+        <img width="100%" className="mb-5" src="https://www.politix.com.au/on/demandware.static/-/Sites/default/dwd0eca585/images/slot/campaign/20181019-Sunglass-Collections/img/banner-01.png" alt="ads"/>
+        
 
     {/* Best Seller */}
-    <h3 class="h3 mt-5 pt-5">Best Saving Eyeware </h3>
-    <div class="row">
+    <hr/>
+    <h3 class="h3 ">Best Saving Eyeware </h3>
+    <hr/>
+    <div class="row px-3">
 
         {
             arr.map(p=>
-                <div class="col-md-3 col-6 card-padding">
+                <div data-aos="zoom-in-left" class="col-md-3 col-6 card-padding">
                 <div class="product-grid8">
                     <div class="product-image8 d-flex align-items-center justify-content-center p-3" style={{height: '240px'}}>
                         <Link to="/product">
@@ -156,17 +176,17 @@ const Home = () => {
 
     {/* Advertisement */}
     <hr/>
-    <img width="100%" src={Banner2} alt="ads"/>
+    <img width="100%" className="mb-5" src={Banner2} alt="ads"/>
+    
     <hr/>
-
-
-    <h3 class="h3 mt-5 pt-5">Customars choice's</h3>
-    <div class="row mb-5 pb-5">
+    <h3 class="h3">Customars choice's</h3>
+    <hr/>
+    <div class="row mb-5 pb-5 px-2">
 
         {
             arr.map(p=>
                 
-                <div class="col-md-3 col-6 card-padding" >
+                <div data-aos="zoom-in-left" class="col-md-3 col-6 card-padding" >
                 <div class="product-grid" style={{height:'300px'}}>
                     <div class="product-image d-flex align-items-center justify-content-center p-4" style={{height:'190px'}}>
                         <Link to="/product" className="mt-5">
@@ -205,6 +225,23 @@ const Home = () => {
             <h3>Our brands</h3>
             <hr/>
             <BrandCarousel/>
+            <hr/>
+
+            {/* Map integrate */}
+            <LoadScript
+                googleMapsApiKey="AIzaSyDzZswvUwr1zPjAVbIyo3R-KGVQpOUJQPA"
+            >
+                <GoogleMap
+                mapContainerStyle={containerStyle}
+                center={position}
+                zoom={12}
+                >
+                   <Marker
+                    onLoad={onLoad}
+                    position={position}
+                    />
+                </GoogleMap>
+            </LoadScript>
 
 
         </div>

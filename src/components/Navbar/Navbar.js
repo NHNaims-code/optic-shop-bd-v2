@@ -3,12 +3,15 @@ import './Navbar.css';
 import Logo from '../../assets/logo.jpg';
 import { PublicContext } from '../../App';
 import { Link } from 'react-router-dom';
+import Topbar from './Topbar';
 
 const Navbar = ({currentMenu, cart}) => {
 
     const [setCurrentMenu] = useContext(PublicContext);
 
     return (
+        <>
+        <Topbar/>
         <nav class="navbar navbar-expand-lg navbar-light bg-white m-0 p-0 shadow-sm">
             
         <Link to="/">
@@ -154,6 +157,7 @@ const Navbar = ({currentMenu, cart}) => {
             </ul>
         </div>
         </nav>
+        </>
     );
 };
 

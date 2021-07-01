@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { createContext, useEffect, useState } from 'react';
 import Loading from './components/utility/Loading/Loading';
 import Product from './components/Pages/Product/Product';
+import Login from './components/Pages/Login/Login';
 
 export const PublicContext = createContext();
 
@@ -29,10 +30,7 @@ function App() {
   return (
     <div className="App">
       <PublicContext.Provider  value={[setCurrentMenu, cart, setCart]} >
-      <Topbar/>
         <Router>
-      <Navbar currentMenu={currentMenu} cart={cart}></Navbar>
-      
       {
         !load && 
         <div className="loading-container-root">
@@ -41,26 +39,35 @@ function App() {
         </div>
         </div>
       }
-    
           <Switch>
             <Route exact path="/">
+              <Navbar currentMenu={currentMenu} cart={cart}></Navbar>
               <Home/>
+              <Footer cart={cart}></Footer>
             </Route>
             <Route path="/admin">
               <Admin/>
             </Route>
             <Route path="/cartier">
+              <Navbar currentMenu={currentMenu} cart={cart}></Navbar>
               <Cartier/>
+              <Footer cart={cart}></Footer>
             </Route>
             <Route path="/contact">
+              <Navbar currentMenu={currentMenu} cart={cart}></Navbar>
               <Contact/>
+              <Footer cart={cart}></Footer>
             </Route>
             <Route path="/product">
+              <Navbar currentMenu={currentMenu} cart={cart}></Navbar>
               <Product/>
+              <Footer cart={cart}></Footer>
+            </Route>
+            <Route path="/login">
+              <Login/>
             </Route>
           </Switch>
         </Router>
-      <Footer cart={cart}></Footer>
       </PublicContext.Provider>
     
     </div>

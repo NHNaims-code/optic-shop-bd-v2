@@ -1,10 +1,11 @@
 import React from 'react';
 import './Carousel.css';
 import EyeWear from '../../assets/slide2.jpg'
+import EyeWear2 from '../../assets/eye_wear.jpg'
 
 const Carousel = () => {
     return (
-        <div id="carouselExampleControls" class="carousel slide mt-0" data-ride="carousel">
+        <div id="carouselExampleControls" class=" carousel slide mt-0" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
             <img src={EyeWear} class="d-block w-100" alt="..."/>

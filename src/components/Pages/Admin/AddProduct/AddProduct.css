@@ -1,0 +1,18 @@
+.add-product-root{
+    position: relative;
+}
+
+.cross{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: tomato;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.add-product{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

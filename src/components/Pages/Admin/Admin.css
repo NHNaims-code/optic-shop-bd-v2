@@ -1,3 +1,9 @@
-.add-product{
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.admin-root{
+    min-height: 100vh;
 }
+
+.dashboard-container{
+    margin-left: 300px;
+    width: 940px;
+}
+

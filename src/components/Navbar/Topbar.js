@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './Topbar.css';
 
 const Topbar = () => {
@@ -13,7 +13,7 @@ const Topbar = () => {
                 <a class="nav-link primary-color small" href="#">Checkout</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link primary-color small" href="#">Login/Register</a>
+                <Link class="nav-link primary-color small" to="/login">Login/Register</Link>
             </li>
             </ul>
         </div>
