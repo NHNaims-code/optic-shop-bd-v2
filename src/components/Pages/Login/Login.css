@@ -1,19 +1,42 @@
-.login-root{
-    width: 400px;
-    height: 500px;
-    margin: 50px auto;
+.Login{
+    background-color: #F8FAFC;
+    height: 100vh;
+}
+.header{
+    max-height: 200px;
+    width: 100%;
+    /* background-color: red; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.header img{
+    max-height: 50px;
 }
 
-.login-root button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 60px;
-
+.form{
+    height: 350px;
+    width: 35%;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius:5px;
+    /* background-color: red; */
 }
 
-.login-root button img{
-    margin-right: 15px;
+.googleLogin{
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius:50px;
+    margin: 20px 0 10px;
+    cursor: pointer;
+}
+.googleLogin:hover{
+    background-color: lightgray;
+}
+.googleLogin img{
+    padding: 5px;
+
+}
+.googleLogin h6{
+    padding: 0;
+    margin: 0;
 }

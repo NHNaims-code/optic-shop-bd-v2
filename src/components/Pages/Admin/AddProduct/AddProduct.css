@@ -1,5 +1,7 @@
 .add-product-root{
     position: relative;
+    width: 500px;
+    color: black !important;
 }
 
 .cross{

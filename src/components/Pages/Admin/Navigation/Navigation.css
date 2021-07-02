@@ -4,10 +4,10 @@
     font-size: 12px;
     font-weight: 200;
     background-color: #2e353d;
-    position: fixed;
+    position: relative;
     top: 0px;
     width: 300px;
-    height: 100%;
+    min-height: 100vh;
     color: #e1ffff;
   }
   .nav-side-menu .brand {

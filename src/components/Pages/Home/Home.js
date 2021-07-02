@@ -26,7 +26,8 @@ const Home = () => {
     };
 
     const position = {
-        lat:23.7709168, lng:90.422718
+        // lat:23.7709168, lng:90.422718
+        lat:23.791299867452377, lng:90.4031332828447
     };
     
     const onLoad = marker => {
@@ -234,7 +235,7 @@ const Home = () => {
                 <GoogleMap
                 mapContainerStyle={containerStyle}
                 center={position}
-                zoom={12}
+                zoom={17}
                 >
                    <Marker
                     onLoad={onLoad}

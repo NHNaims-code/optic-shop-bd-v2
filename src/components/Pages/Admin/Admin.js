@@ -5,13 +5,13 @@ import Navigation from './Navigation/Navigation';
 
 const Admin = () => {
 
-    const [currentState, setCurrentState] = useState('dashboard')
+    const [currentState, setCurrentState] = useState('addProduct')
 
     return (
         <div className="d-flex bg-light admin-root">
-           <Navigation></Navigation>
+           <Navigation setCurrentState={setCurrentState}></Navigation>
            <div className="dashboard-container">
-               <Dashboard/>
+               <Dashboard currentState={currentState}></Dashboard>
            </div>
         </div>
     );
